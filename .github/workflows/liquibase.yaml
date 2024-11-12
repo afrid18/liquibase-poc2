@@ -72,7 +72,7 @@ jobs:
           cd liquibase-poc2
           git checkout main
           cat $LIQUIBASE_HOME/changelog.yml
-          $LIQUIBASE_HOME/liquibase --url="jdbc:mysql://34.121.133.153:3306/liquibase_test_db?user=mohith&password=mohith" \
+          $LIQUIBASE_HOME/liquibase --url="jdbc:mysql://34.121.133.153:3306/liquibase_test_db?user=root&password=test_db&connectTimeout=30000&socketTimeout=30000" \
           --username=mohith \
           --password=mohith \
           --changelog-file=changelog.yml update --logLevel=debug
