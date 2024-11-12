@@ -38,3 +38,16 @@ databaseChangeLog:
       rollback:
         - sqlFile:
             path: "scripts/index_rollback.sql"
+
+  # Fourth change set: populates the database with data
+  - changeSet:
+      id: "phase4"
+      author: "koushik"
+      comment: "Insert data into the database tables"
+      labels: "initial-data"
+      changes:
+        - sqlFile:
+            path: "scripts/data_add.sql"
+      rollback:
+        - sqlFile:
+            path: "scripts/data_add_rollback.sql"
