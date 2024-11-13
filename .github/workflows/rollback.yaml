@@ -61,7 +61,7 @@ jobs:
 
       # Rollback the last change
       - name: Rollback the last change
-        run: $LIQUIBASE_HOME/liquibase --changeLogFile=changelog.xml rollbackCount 1
+        run: $LIQUIBASE_HOME/liquibase --changeLogFile=changelog.yml rollbackCount 1
 
       - name: Check if rollback was successful
         run: $LIQUIBASE_HOME/liquibase --changeLogFile=changelog.xml status --verbose
